@@ -16,10 +16,12 @@
     </head>
     
     <body>
+        <!-- Top of Page -->
         <header>
             <h1>Fridge2Food</h1>
             <p>Your go 2 for no fuss recipes</p>
         </header>
+        <!-- App Description -->
         <div>
             <p>
                 A mobile forward, web based application which allows you to find recipes based on the available ingredients in your house. Additionally, we will include a feature to order missing ingredients from other recipes.
@@ -29,6 +31,15 @@
                 Fridge2Food will strive to make cooking easier by eliminating the need to either shop for ingredients that are not currently available to you, or searching through numerous recipes to find one that you can make with only what is available to you.
             </p>
         </div>
+
+        <!-- Food Search Form -->
+        <form>
+            <!-- Input Text Field -->
+            <input type="text" id="ingredient-input" class="ingredient-input" placeholder="Ingredient(s)" aria-label="Recipe Search" aria-describedby="search-button">
+            <!-- Search Button -->
+            <button id="search-btn" class="btn search-btn=">Search<i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        
 
         <!-- JQuery -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
