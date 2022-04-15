@@ -1,1 +1,15 @@
 /* Styling for Fridge2Food */
+
+.title {
+    color: rgb(47, 47, 69);
+    font-size:60px;
+
+}
+
+#h1 {
+    block-size: auto;
+}
+
+.section {
+    background-color: rgb(121, 230, 194);
+}
