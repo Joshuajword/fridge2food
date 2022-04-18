@@ -15,50 +15,59 @@
       <title>Fridge2Food</title>
   </head>
     
-    <body>
-        <!-- Top of Page -->
+  <body>
 
-        <section class="section">
-            <div class="container">
-              <h1 class="title">
-                FRIDGE 2 FOOD
-              </h1>
-              <p class="subtitle">
-                Your 1st stop between your <strong>FRIDGE</strong> and putting your <strong>FOOD</strong> on the dinner table!
-              </p>
-            </div>
-          </section>
+    <!-- Top of Page -->
+    <header class="section">
+      <div class="container">
+        <h1 class="title">
+          FRIDGE 2 FOOD
+        </h1>
+        <p class="subtitle">
+          Your 1st stop between your <strong>FRIDGE</strong> and putting your <strong>FOOD</strong> on the dinner table!
+        </p>
+      </div>
+    </header>
   
-        <!-- Food Search Form -->
-        <section class="section">
-            <form>
-                <!-- Input Text Field -->
-                <input type="text" id="ingredient-input" class="ingredient-input" placeholder="Ingredient(s)" aria-label="Recipe Search" aria-describedby="search-button">
-                <!-- Search Button -->
-                <button id="search-btn" class="btn search-btn=">Search<i class="fa-solid fa-magnifying-glass"></i></button>
+    <!-- Food Search Form -->
+    <section class="input-form">
+      <form>
+        <!-- Input Text Field -->
+          <input type="text" id="ingredient-input" class="ingredient-input" placeholder="Ingredient(s)" aria-label="Recipe Search" aria-describedby="search-button">
+          <!-- Search Button -->
+          <button id="search-btn" class="js-modal-trigger btn search-btn" data-target="modal-ingredient-valid">Search <i class="fa-solid fa-magnifying-glass"></i></button>
 
-                <!-- Filter Drop Down Menu for Allergies -->
+          <!-- Filter Drop Down Menu for Allergies -->
 
-                <!-- Filter Drop Down Menu for Diet -->
-            </form>
-        </section>
-      <!-- Container for Results/Recipes -->
+          <!-- Filter Drop Down Menu for Diet -->
+      </form>
+    </section>
 
-      <!-- Container for Ingrients from selected Recipe -->
+    <!-- Container for Results/Recipes -->
+    <section id="results" class="results">
+      <div class="container">
+        <ul id="results-list" class="results-list">
+          <li id="results-list-item-0" class="results-list-item">
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Container for Ingrients from selected Recipe -->
 
       
-      <!-- Modal for Ingredient Input Validation -->
-      <div class="modal">
-          <div class="modal-background"></div>
-          <div class="modal-card">
-              <header class="modal-card-head">
-                  <p class="modal-card-title">Please Enter an Ingredient to Search for Recipes</p>
-              </header>
-          </div>
+    <!-- Modal for Ingredient Input Validation -->
+    <div id="modal-ingredient-valid" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+          <header class="modal-card-head">
+              <p class="modal-card-title">Please Enter an Ingredient to Search for Recipes</p>
+          </header>
       </div>
+    </div>
 
     <h2>#FRIDGE2FOOD</h2>
-    <body>
+  
 
             <button class="button is-primary">
                 Find my recipe!
@@ -73,15 +82,16 @@
             </div>
           </div>
 
-        <!-- JQuery -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <!-- Moment.JS for Time -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-        <!-- Local JavaScript Tag -->
-        <script src="./assets/js/script.js"></script>
-    </body>
 
     <footer>Find your food, we'll do the rest.
-            <div>#FRIDGE2FOOD</div>
+      <div>#FRIDGE2FOOD</div>
     </footer>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Moment.JS for Time -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- Local JavaScript Tag -->
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
