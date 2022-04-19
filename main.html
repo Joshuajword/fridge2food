@@ -35,7 +35,7 @@
         <!-- Input Text Field -->
           <input type="text" id="ingredient-input" class="ingredient-input" placeholder="Ingredient(s)" aria-label="Recipe Search" aria-describedby="search-button">
           <!-- Search Button -->
-          <button id="search-btn" class="js-modal-trigger btn search-btn" data-target="modal-ingredient-valid">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+          <button id="search-btn" class="button is-primary search-btn">Find My Recipe<i class="fa-solid fa-magnifying-glass"></i></button>
 
           <!-- Filter Drop Down Menu for Allergies -->
 
@@ -55,23 +55,10 @@
 
     <!-- Container for Ingrients from selected Recipe -->
 
-      
-    <!-- Modal for Ingredient Input Validation -->
-    <div id="modal-ingredient-valid" class="modal">
-      <div class="modal-background"></div>
-      <div class="modal-card">
-          <header class="modal-card-head">
-              <p class="modal-card-title">Please Enter an Ingredient to Search for Recipes</p>
-          </header>
-      </div>
-    </div>
+    
 
     <h2>#FRIDGE2FOOD</h2>
-  
 
-            <button class="button is-primary">
-                Find my recipe!
-            </button>
             
         <div class="columns">
               <div class="column">        We are here to make dinner easier
@@ -86,6 +73,18 @@
     <footer>Find your food, we'll do the rest.
       <div>#FRIDGE2FOOD</div>
     </footer>
+
+    <!-- Modal for Ingredient Input Validation -->
+    <div id="modal-ingredient-valid" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+          <header class="modal-card-head">
+              <p class="modal-card-title">Please Enter an Ingredient to Search for Recipes</p>
+          </header>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

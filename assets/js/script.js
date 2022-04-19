@@ -4,6 +4,8 @@
 var searchButtonEl = $("#search-btn")
 var ingredientModal = $("#modal-ingredient-valid")
 var modalBackground = $("#modal-background")
+var modalClose = $(".modal-close")
+var resultListEl = $("#results-list")
 
 // search form input capture
 var formSubmitHandler = function(event) {
@@ -14,10 +16,11 @@ var formSubmitHandler = function(event) {
     var selectedIngredient = searchInputEl.value.trim();
 
     if (selectedIngredient === "") {
-        $(ingredientModal).attr("class", "is-active");
+        ingredientModal.show();
     }
     else {
         searchInputEl.value = "";
+        resultListEl.html("");
         searchRecipes(selectedIngredient);
         console.log(selectedIngredient);
     }
@@ -33,37 +36,42 @@ function searchRecipes(selectedIngredient) {
         }
     };
 
-    fetch('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query='+ selectedIngredient +'&instructionsRequired=true&ranking=2&addRecipeInformation=true&number=25&fillIngredients=true', options)
+    fetch('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query='+ selectedIngredient +'&instructionsRequired=true&ranking=2&addRecipeInformation=true&number=10&fillIngredients=true', options)
         .then(response => response.json())
         .then(function(response){
-            console.log(response)
+            console.log(response.results)
 
             // For loop for recipe list
-            for ( i=0; i < response.results.length; i++)
+            for ( i=0; i < response.results.length; i++) {
                 // variable declaration
                 var recipeTitle = response.results[i].title
-                console.log(response.results.title);
-                var recipeImg = response.results[i].image
-                var recipeLink = response.results[i].sourceName
+                var recipeImgURL = response.results[i].image
+                var recipeLink = response.results[i].sourceUrl
                 var recipeSummary = response.results[i].summary
 
                 // creating elements for list item
-                var resultListEl = $("#results-list")
                 var listItemEl = document.createElement("li");
                 $(listItemEl).attr("class", "results-list-item");
                 $(listItemEl).attr("id", "results-list-item-"+[i]);
                 $(resultListEl).append(listItemEl);
+                
+                
+                
 
-                $(listItemEl).html("Title: " + recipeTitle);
+                $(listItemEl).html("<div class='card card-content'><div class='card-image'><img src=" + recipeImgURL + "></div> Title: " + recipeTitle + "<br> <a class='button' href=" + recipeLink + " target= 'b'> Recipe Link </a>" + "</div");
+            }
         })
         .catch(err => console.error(err));
 };
 
 // Modal Removal Function
 function modalClickOff () {
-    ingredientModal.removeClass("is-active");
+    ingredientModal.hide();
 };
 
 // UI Section
 searchButtonEl.on("click", formSubmitHandler);
-modalBackground.on("click", modalClickOff);
+
+modalClose.on("click", modalClickOff);
+    
+
