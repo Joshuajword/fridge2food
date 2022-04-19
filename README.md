@@ -1,14 +1,38 @@
-# fridge2food
-A mobile forward, web based application which allows you to find recipes based on the available ingredients in your house. Additionally, we will include a feature to order missing ingredients from other recipes.
-tl:dr - search recipes from ingredients on hand
+# 🍔 Fridge2Food 🍔
+A mobile forward, web based application which allows users to find recipes based on the available ingredients in the fridge. 
 
-Fridge2Food will strive to make cooking easier by eliminating the need to either shop for ingredients that are not currently available to you, or searching through numerous recipes to find one that you can make with only what is available to you.
+Fridge2Food will strive to make cooking easier and cost-effective by eliminating the need to throw away spoiled or rotten food due to random and/or left over ingredients in the fridge. 
 
-Future updates will include: 
-1.) an api that will allow the search of multiple ingredients with the resulting recipes appearing
-2.) an api will will add ingredients from additional recipes that are not available to you currently into a search for local markets, and an instacart that will be filled with them for purchase and/or delivery, should you choose
+## Technologies: 
+* HTML
+* CSS
+* JavaScript
+* Jquery
+* Bulma 
+* Spoonacular API (from RapidAPI)
 
-Technology used for this project:
-web based api's from instacart and //recipe web api//, as well as HTML, and finally Bulma for CSS
+## How To:
+* Navigate to the `Ingredient(s)` Search Bar, and type in the desired Ingredient to search for populated Recipes. Press `Enter` or Click `Find My Recipe 🔎` button
+* A List of 10 Recipes pertaining to the desired Ingredient entered will appear below the Input Form
+* Recipe Image | Recipe Title | Recipe Link (opens in new tab) will be contained within Bulma Cards and displayed in a vertical column.
 
-Project participants are: Joshua Ballard, Mihir Patel, and Jeffrey Young
+## Screenshot:
+(link)
+![This is the homepage for the Fridge2Food Recipe Searching Application](./assets/images/Screenshot.JPG)
+
+## Future Implementations:
+* Search of Multiple Ingredients with results appearing
+* Modal pop up of Recipe Ingredients with API Link to local Grocery Store Delivery via Instacart (or other accessible API)
+
+## Author(s):
+* Joshua Ballard
+* Mihir Patel
+* Jeffrey Young
+
+## Contact Information:
+* Joshua Ballard: https://github.com/Joshuajword
+* Mihir Patel: https://github.com/Mpz45
+* Jeffrey Young: https://github.com/jeffymiyoung
+
+---
+© 2022 Fridge2Food

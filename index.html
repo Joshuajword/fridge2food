@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bulma framework link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css"/>
+      <!-- Font Awesome Link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- Local Styles CSS Link -->
+      <link rel="stylesheet" href="./assets/css/styles.css" />
+      <!-- favicon icon Link -->
+      <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+      <title>Fridge2Food</title>
+  </head>
+    
+  <body>
+
+    <!-- Top of Page -->
+    <header class="section">
+      <div class="container">
+        <h1 class="title">
+          FRIDGE 2 FOOD
+        </h1>
+        <p class="subtitle">
+          Your 1st stop between your <strong>FRIDGE</strong> and putting your <strong>FOOD</strong> on the dinner table!
+        </p>
+      </div>
+    </header>
+  
+    <!-- Food Search Form -->
+    <section class="input-form container">
+      <form>
+        <!-- Input Text Field -->
+          <input type="text" id="ingredient-input" class="ingredient-input" placeholder="Ingredient(s)" aria-label="Recipe Search" aria-describedby="search-button">
+          <!-- Search Button -->
+          <button id="search-btn" class="button is-primary search-btn">Find My Recipe<i class="fa-solid fa-magnifying-glass"></i></button>
+
+          <!-- Filter Drop Down Menu for Allergies -->
+
+          <!-- Filter Drop Down Menu for Diet -->
+      </form>
+    </section>
+
+    <!-- Container for Results/Recipes -->
+    <section id="results" class="results">
+      <div class="container">
+        <ul id="results-list" class="results-list">
+          <li id="results-list-item-0" class="results-list-item">
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Container for Ingrients from selected Recipe -->
+
+    
+
+    <h2>#FRIDGE2FOOD</h2>
+
+            
+        <div class="columns">
+              <div class="column">        We are here to make dinner easier
+            </div>
+              <div class="column">        Whatever is in your fridge
+            </div>
+              <div class="column">        Fridge2Food will strive to make cooking easier
+            </div>
+          </div>
+
+
+    <footer>Find your food, we'll do the rest.
+      <div>#FRIDGE2FOOD</div>
+    </footer>
+
+    <!-- Modal for Ingredient Input Validation -->
+    <div id="modal-ingredient-valid" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+          <header class="modal-card-head">
+              <p class="modal-card-title">Please Enter an Ingredient to Search for Recipes</p>
+          </header>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Moment.JS for Time -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- Local JavaScript Tag -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
