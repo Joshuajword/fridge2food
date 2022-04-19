@@ -58,7 +58,7 @@ function searchRecipes(selectedIngredient) {
                 
                 
 
-                $(listItemEl).html("<div class='card card-content'><div class='card-image'><img src=" + recipeImgURL + "></div> Title: " + recipeTitle + "<br> <a class='button' href=" + recipeLink + " target= 'b'> Recipe Link </a>" + "</div");
+                $(listItemEl).html("<div class='card card-content'> <div class='card-image'> <img src=" + recipeImgURL + "></div> <div class= 'title is-4'> Recipe Title: " + recipeTitle + "</div> <footer class='card-footer'> <a href=" + recipeLink + " class= 'card-footer-item' target= 'b'> Recipe Link </a></footer> </div>");
             }
         })
         .catch(err => console.error(err));
