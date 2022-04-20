@@ -17,7 +17,7 @@ Fridge2Food will strive to make cooking easier and cost-effective by eliminating
 * Recipe Image | Recipe Title | Recipe Link (opens in new tab) will be contained within Bulma Cards and displayed in a vertical column.
 
 ## Screenshot:
-(link)
+https://joshuajword.github.io/fridge2food/
 ![This is the homepage for the Fridge2Food Recipe Searching Application](./assets/images/Screenshot.JPG)
 
 ## Future Implementations:
