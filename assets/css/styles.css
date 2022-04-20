@@ -1,19 +1,21 @@
 /* Styling for Fridge2Food */
 
-
-.title {
-    color: rgb(47, 47, 69);
-    font-size:60px;
+body { 
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(https://images.freeimages.com/images/large-previews/e0b/pepper-in-color-1057261.jpg) ;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+    background-color: #999;
+    /*background-opacity: 0.2;*/
 
 }
 
-#h1 {
+.h1 {
     block-size: auto;
 }
 
-.section {
-    background-color: rgb(121, 230, 194);
-}
+.hero-body-padding
 
 .fa-magnifying-glass {
     padding-left: 5px;
