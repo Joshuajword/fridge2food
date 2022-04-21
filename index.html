@@ -65,20 +65,6 @@
     <section class="background-image">
 
     </section>
-  
-    <!-- Food Search Form -->
-    <section class="input-form container">
-      <form>
-        <!-- Input Text Field -->
-          <input type="text" id="ingredient-input" class="ingredient-input" placeholder="Ingredient(s)" aria-label="Recipe Search" aria-describedby="search-button">
-          <!-- Search Button -->
-          <button id="search-btn" class="button is-info search-btn">Find My Recipe<i class="fa-solid fa-magnifying-glass"></i></button>
-
-          <!-- Filter Drop Down Menu for Allergies -->
-
-          <!-- Filter Drop Down Menu for Diet -->
-      </form>
-    </section>
 
     <section id=info>
       <h2>#FRIDGE2FOOD</h2>
@@ -89,6 +75,21 @@
 
             <div class="column">Anything you're missing can be ordered right on the page through instacart</div>
           </div>
+    </section>
+
+    <!-- Food Search Form -->
+    <section class="input-form container">
+      <form class="columns input-form">
+        <!-- Input Text Field -->
+          <input type="text" id="ingredient-input" class="column is-8 ingredient-input" placeholder="Ingredient(s)" aria-label="Recipe Search" aria-describedby="search-button">
+          <!-- Search Button -->
+          <button id="search-btn" class="button is-info column is-2 search-btn">Find My Recipe <i class="fa-solid fa-magnifying-glass"></i></button>
+          <!-- Random Button -->
+          <button id="random-btn" class="button is-info column is-2 random-btn">Random Recipe <i class="fa-solid fa-magnifying-glass"></i></button>
+          <!-- Filter Drop Down Menu for Allergies -->
+    
+          <!-- Filter Drop Down Menu for Diet -->
+      </form>
     </section>
 
     <!-- Container for Results/Recipes -->

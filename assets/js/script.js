@@ -2,6 +2,7 @@
 
 // variable declarations
 var searchButtonEl = $("#search-btn")
+var randomButtonEl = $("#random-btn")
 var ingredientModal = $("#modal-ingredient-valid")
 var modalBackground = $("#modal-background")
 var modalClose = $(".modal-close")
@@ -64,6 +65,37 @@ function searchRecipes(selectedIngredient) {
         .catch(err => console.error(err));
 };
 
+// Random  Recipe API from TheMealDB API - www.themealdb.com/api/json/v1/1/random.php 
+function getRandomRecipe (event) {
+    event.preventDefault();
+
+    var queryURL = "https://www.themealdb.com/api/json/v1/1/random.php";$.ajax({
+        url: queryURL,
+        method: "GET",
+    }).then(function(response){
+        console.log(response.meals);
+
+        for (i=0; 1 < response.meals; 1++) {
+            var randomTitle = response.meals.strMeal
+            var randomImgURL = response.meals.strMealThumb
+            var randomLink = response.meals.strSource
+            var randomCategory = response.meals.strCategory
+            var randomVideo = response.meals.strYoutube
+
+            // // creating elements for list item
+            var listItemEl = document.createElement("li");
+            $(listItemEl).attr("class", "results-list-item");
+            $(listItemEl).attr("id", "results-list-item-0");
+            $(resultListEl).append(listItemEl);
+
+            $(listItemEl).html("<div class='card card-content'> <div class='card-image'> <img src=" + randomImgURL + "></div>")
+
+        };
+    });
+
+    
+};
+
 // Modal Removal Function
 function modalClickOff () {
     ingredientModal.hide();
@@ -71,6 +103,8 @@ function modalClickOff () {
 
 // UI Section
 searchButtonEl.on("click", formSubmitHandler);
+
+randomButtonEl.on("click", getRandomRecipe);
 
 modalClose.on("click", modalClickOff);
     
