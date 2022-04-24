@@ -2,10 +2,12 @@
 
 // variable declarations
 var searchButtonEl = $("#search-btn")
+var randomButtonEl = $("#random-btn")
 var ingredientModal = $("#modal-ingredient-valid")
 var modalBackground = $("#modal-background")
 var modalClose = $(".modal-close")
 var resultListEl = $("#results-list")
+var homeRefresh = $("#home")
 
 // search form input capture
 var formSubmitHandler = function(event) {
@@ -42,7 +44,7 @@ function searchRecipes(selectedIngredient) {
             console.log(response.results)
 
             // For loop for recipe list
-            for ( i=0; i < response.results.length; i++) {
+            for ( i=0; i < response.results.length; i++ ) {
                 // variable declaration
                 var recipeTitle = response.results[i].title
                 var recipeImgURL = response.results[i].image
@@ -58,11 +60,45 @@ function searchRecipes(selectedIngredient) {
                 
                 
 
-                $(listItemEl).html("<div class='card card-content'> <div class='card-image'> <img src=" + recipeImgURL + "></div> <div class= 'title is-4'> Recipe Title: " + recipeTitle + "</div> <footer class='card-footer'> <a href=" + recipeLink + " class= 'card-footer-item' target= 'b'> Recipe Link </a></footer> </div>");
+                $(listItemEl).html("<div class='card card-content'> <div class= 'title is-4'> Recipe Title: " + recipeTitle + "</div> <div class='card-image'> <img src=" + recipeImgURL + "></div> <div class='recipe-summary'>" + recipeSummary + "</div> <footer class='card-footer'> <a href=" + recipeLink + " class= 'card-footer-item' target= 'b'> Recipe Link </a></footer> </div>");
             }
         })
         .catch(err => console.error(err));
 };
+
+// Random  Recipe API from TheMealDB API - www.themealdb.com/api/json/v1/1/random.php 
+function getRandomRecipe (event) {
+    event.preventDefault();
+
+    // remove past Li elements
+    resultListEl.empty();
+
+    var queryURL = "https://www.themealdb.com/api/json/v1/1/random.php";$.ajax({
+        url: queryURL,
+        method: "GET",
+    }).then(function(response){
+        console.log(response.meals);
+
+            var randomTitle = response.meals[0].strMeal
+            var randomImgURL = response.meals[0].strMealThumb
+            var randomLink = response.meals[0].strSource
+            var randomInstructions = response.meals[0].strInstructions
+            var randomVideo = response.meals[0].strYoutube
+
+            // // creating elements for list item
+            var listItemEl = document.createElement("li");
+            $(listItemEl).attr("class", "results-list-item");
+            $(listItemEl).attr("id", "results-list-item-0");
+            $(resultListEl).append(listItemEl);
+
+            $(listItemEl).html("<div class='card card-content'> <div class= 'title is-4'> Recipe Title: " + randomTitle + "</div> <div class='card-image'> <img src=" + randomImgURL + "></div> <div class='instruction'> <b>Instructions: </b>" + randomInstructions + "</div> <a href=" + randomVideo + " target='_blank' class='watch-video button is-info'>Watch Video</a> <footer class='card-footer'> <a href=" + randomLink + " class= 'card-footer-item' target= 'b'> Recipe Link </a></footer> </div>");
+    });
+};
+
+// Home Refresh Function
+function refreshHomePage () {
+    location.reload();    
+}
 
 // Modal Removal Function
 function modalClickOff () {
@@ -72,7 +108,12 @@ function modalClickOff () {
 // UI Section
 searchButtonEl.on("click", formSubmitHandler);
 
+randomButtonEl.on("click", getRandomRecipe);
+
 modalClose.on("click", modalClickOff);
+
+homeRefresh.on("click", refreshHomePage);
+
     
 // Navbar toggle
 document.addEventListener('DOMContentLoaded', () => {
@@ -97,18 +138,18 @@ document.addEventListener('DOMContentLoaded', () => {
   
         });
       });
-    }
+    };
   
-  });
+});
 
-  $(document).ready(function() {
+$(document).ready(function() {
 
     // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
-  
+    
         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         $(".navbar-burger").toggleClass("is-active");
         $(".navbar-menu").toggleClass("is-active");
-  
+    
     });
-  });
+});

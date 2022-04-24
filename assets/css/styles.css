@@ -15,14 +15,36 @@ body {
     block-size: auto;
 }
 
-.hero-body-padding
+.hero-body-padding {
+
+}
+
+.ingredient-input {
+    padding: 7px;
+}
 
 .fa-magnifying-glass {
-    padding-left: 5px;
+    padding-left: 8px;
+}
+
+.button {
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .card {
-    margin-top: 8px;
+    margin-top: 32px;
     margin-bottom: 8px;
     text-align: center;
 }
+
+.recipe-summary {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.watch-video {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
