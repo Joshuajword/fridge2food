@@ -15,8 +15,11 @@ body {
     block-size: auto;
 }
 
-.hero-body-padding {
-
+#info {
+    margin-bottom: 8px;
+}
+.input-form {
+    margin-top: 8px;
 }
 
 .ingredient-input {
