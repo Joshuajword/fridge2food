@@ -18,7 +18,7 @@ Fridge2Food will strive to make cooking easier and cost-effective by eliminating
 
 ## Screenshot:
 https://joshuajword.github.io/fridge2food/
-![This is the homepage for the Fridge2Food Recipe Searching Application](./assets/images/fridge2food.jpg.JPG)
+![This is the homepage for the Fridge2Food Recipe Searching Application](./assets/images/fridge2food.jpg)
 
 ## Future Implementations:
 * Search of Multiple Ingredients with results appearing
