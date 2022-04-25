@@ -1,14 +1,13 @@
 /* Styling for Fridge2Food */
 
 body { 
+    /*background-opacity: 0.2;*/
     background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(https://images.freeimages.com/images/large-previews/e0b/pepper-in-color-1057261.jpg) ;
-    background-position: center center;
+    background-position: bottom 75px;
     background-repeat:  no-repeat;
     background-attachment: fixed;
     background-size:  cover;
     background-color: #999;
-    /*background-opacity: 0.2;*/
-
 }
 
 .h1 {
@@ -35,6 +34,10 @@ body {
     margin-right: 8px;
 }
 
+.results {
+    margin-bottom: 100px;
+}
+
 .card {
     margin-top: 32px;
     margin-bottom: 8px;
@@ -51,3 +54,14 @@ body {
     margin-bottom: 16px;
 }
 
+.bottom-page {
+    background-color: hsl(217, 71%, 53%);
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+
+.footer-nav {
+    color: white;
+}

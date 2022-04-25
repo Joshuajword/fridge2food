@@ -10,11 +10,13 @@ Fridge2Food will strive to make cooking easier and cost-effective by eliminating
 * Jquery
 * Bulma 
 * Spoonacular API (from RapidAPI)
+* TheMealDB Random Recipe API
 
 ## How To:
 * Navigate to the `Ingredient(s)` Search Bar, and type in the desired Ingredient to search for populated Recipes. Press `Enter` or Click `Find My Recipe 🔎` button
 * A List of 10 Recipes pertaining to the desired Ingredient entered will appear below the Input Form
 * Recipe Image | Recipe Title | Recipe Link (opens in new tab) will be contained within Bulma Cards and displayed in a vertical column.
+* Click `Random Recipe` to receive a random recipe to spice up your food options that day!
 
 ## Screenshot:
 https://joshuajword.github.io/fridge2food/
