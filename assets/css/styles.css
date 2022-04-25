@@ -1,10 +1,4 @@
 /* Styling for Fridge2Food */
-
-/* Variable declaration */
-:root {
-
-}
-
 body { 
     /*background-opacity: 0.2;*/
     background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(https://images.freeimages.com/images/large-previews/e0b/pepper-in-color-1057261.jpg) ;
